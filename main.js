@@ -2,16 +2,11 @@ const like = document.getElementById("feedback-like");
 let counter = document.getElementById("feedback-count");
 
 like.addEventListener('click', function() {
+    let clicks = 0;
 
+    if (counter.innerHTML !== '') {
+        clicks = Number(counter.innerHTML);
+    }
 
-    function click() {
-        let clicks = 0;
-        let result;
-        result = clicks + 1;
-
-        return result;
-    };
-
-    counter.innerHTML = click();
-
+    counter.innerHTML = clicks + 1;
 });
